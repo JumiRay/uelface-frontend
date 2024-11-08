@@ -1,0 +1,175 @@
+/* Modern CSS Styles for Your Vue App */
+
+/* Root Variables for Colors, Fonts, etc. */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f5a623;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --border-radius: 8px;
+    --font-family: 'Inter', sans-serif;
+  }
+  
+  /* General Body Styling */
+  body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: darken(var(--primary-color), 10%);
+  }
+  
+  /* Input Field Styles */
+  input[type="email"],
+  input[type="password"],
+  input[type="text"],
+  input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+  }
+  
+  /* Card Component */
+  .card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  /* Navigation and Links */
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Header Styling */
+  h2 {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  /* Flexbox Layout for Main Pages */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  /* Photo Grid */
+  .example-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s;
+  }
+  
+  .photo-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  .content-wrapper {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px; /* 确保页面具有一致的最大宽度 */
+    margin: 0 auto;
+  }
+  
+  /* Upload Button */
+  .upload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ddd;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .upload-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Loading Spinner */
+  .loading-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 1.5rem;
+  }
+  
+  /* Settings and Profile List */
+  .settings-page ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .settings-page li {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .settings-page li:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-container {
+      padding: 1rem;
+    }
+  
+    .example-photos {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+  } 
+  
