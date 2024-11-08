@@ -1,2 +1,0 @@
-# UEL-Frontend
-UEL Frontend
